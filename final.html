@@ -4,35 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercicio final</title>
 </head>
 
 <body>
     <script>
 
-        let num1 = parseInt(prompt('Digite o primeiro número'));
-        let num2 = parseInt(prompt('Digite o segundo número'));
-        let num3 = parseInt(prompt('Digite o terceiro número'));
-        let num4 = parseInt(prompt('Digite o quarto número'));
-        let num5 = parseInt(prompt('Digite o quinto número'));
-        let todosNumeros = [{ num1, num2, num3, num4, num5 }];
-        const pularLinha = '<br>';
+        var par = []
+        var impar = []
+
+        var numRep = []
+
+        var n = 0
+        var numeros = [];
+        for (var i = 0; i < 5; i++) {
+            n = prompt("Digite algum número");
+            numeros.push(n)
+
+            if (n % 2 == 0) {
+                par.push(n)
+            } else {
+                impar.push(n)
+            }
+        }
+
+        for (var j = 0; j <= numeros.length; j++) {
+            if (numeros[j] == n) {
+                numRep.push(n)
+            }
+        }
 
 
-        var menorNumero = num1 + num2 + num3 + num4 + num5;
-        document.write('O menor número é: ' + pularLinha + pularLinha)
-        var maiorNumero = num1 + num2 + num3 + num4 + num5;
-        document.write('O maior número é: ' + pularLinha + pularLinha)
-        var numerosPares = num1 + num2 + num3 + num4 + num5;
-        document.write('O números pares são: ' + pularLinha + pularLinha)
-        var numerosImpares = num1 + num2 + num3 + num4 + num5;
-        document.write('O números ímpares são: ' + pularLinha + pularLinha)
+        document.write(`${numeros}<br><br>`);
+        document.write(`Maior: ${Math.max(...numeros)}<br><br>`);
+        document.write(`Menor: ${Math.min(...numeros)}<br><br>`);
 
-        MenorNumero = Math.min(todosNumeros)
+        document.write(`Par: ${par}<br><br>`);
+        document.write(`Impar: ${impar}<br><br>`);
+        document.write(`O número <b>${n}</b> repete ${numRep.length} vez(es).<br><br>`)
 
-        // tentei de todas maneiras possiveis fazer um array onde o
-        // metodo filter percorresse todo o array e identificasse numero maior e menor :)
 
+
+
+        /*
+        8.1 Crie um sistema que possa receber 5 números. ok
+        8.2 Esse sistema deve retornar para o usuário o menor e o maior número. ok
+        8.3 Ele também deve informar quais são os números pares e ímpares. ok
+        8.4 Ele deve retornar também se tem algum numero repetido, se sim, qual é esse número e quantas vezes está repetido. ok
+        9° Faça um commit e push de tudo para seu repositório no git. ok
+        */
 
     </script>
 </body>
